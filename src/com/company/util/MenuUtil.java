@@ -7,16 +7,17 @@ import java.util.Scanner;
 
 public class MenuUtil {
 
-    public static Menu showMenu() {
+    public static void showMenu() {
         System.out.println("Please select menu : ");
         Menu.showAllMenu();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Please select menu : ");
-        int selectedMenu = sc.nextInt();
+        int selectedMenuNumber = sc.nextInt();
         System.out.println("");
 
-        return Menu.find(selectedMenu);
+        Menu selectedMenu = Menu.find(selectedMenuNumber);
+        selectedMenu.process();
 
     }
 

@@ -1,6 +1,8 @@
 package com.company.bean;
 
-public abstract class Person {
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
     private String name;
     private String surname;
     private int age;
@@ -39,4 +41,8 @@ public abstract class Person {
     }
 
 
+    @Override
+    public String toString() {
+        return name + " " + surname;
+    }
 }
